@@ -1,38 +1,164 @@
-.App {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.item-picker-wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-rows: 100px 482px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "search search selected selected";
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  height: 620px;
+  gap: 15px
+}
+
+.header {
+  grid-area: header;
+  margin-left: 5px;
+}
+
+.header h1 {
+  font-size: 22px;
+}
+
+.item-picker {
+  grid-area: search;
+}
+
+.items-selected {
+  grid-area: selected;
+}
+
+.container {
+  margin: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.site-title {
+  font-size: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+
+.nav li.active {
+  background-color: #555;
+}
+
+.nav li:hover {
+  background-color: #777;
+}
+
+.live-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+.page-format {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.page-format .region-search {
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.login-form-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  border-width: 0 1px;
+  border-radius: 5px;
+}
+
+.submit-form {
+  background-color: #777;
+  width: 100px;
+}
+
+.page-title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.card {
+  border: 2px solid #007bff; /* Adds a border to the card */
+  border-radius: 10px; /* Rounds the corners of the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effects */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight enlargement when hovered */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.card-title {
+  font-size: 1.5em; /* Sets the font size for the title */
+  color: #0056b3; /* Changes the text color */
+  font-weight: bold; /* Makes the title bold */
+}
+
+.card-text {
+  font-size: 1em; /* Sets the font size for the description */
+  color: #333; /* Standard text color */
+}
+
+.container {
+  margin-top: 50px; /* Adds top spacing to the container */
+}
+
+.row {
+  margin-bottom: 20px; /* Adds spacing between rows of tiles */
+}
+
+.tile {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 8px;
+  background-color: #f9f9f9;
 }
