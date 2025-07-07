@@ -31,7 +31,7 @@ import React, { useRef, useState } from "react";
 
 //   return (
 //     <div className="page-format">
-//         <LoadScript googleMapsApiKey="AIzaSyC1WE_AT0PROfV8JFUqSpt2iSFhp0uQUn8" libraries={["places"]}>
+//         <LoadScript googleMapsApiKey="" libraries={["places"]}>
 //         <Autocomplete
 //             onLoad={(autocomplete) => (autocompleteRef.current = autocomplete)}
 //             onPlaceChanged={onPlaceChanged}
