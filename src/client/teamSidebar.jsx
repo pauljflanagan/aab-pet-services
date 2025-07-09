@@ -30,9 +30,9 @@ function SidebarAttribute({ attribObj, fullList, filterList, setFilterList }) {
                 const uniqueAttrValues = [...new Set(fullList.map(item => item[attribute]))];
                 uniqueAttrValues.sort();
                 return (
-                    <div style={{paddingBottom: "2rem"}}>
+                    <div className="d-flex flex-column" style={{paddingBottom: "2rem"}}>
                         <p key={index}><b>{capitalize(attribute)}</b></p>
-                        <div>
+                        <div className="d-flex flex-column">
                             {uniqueAttrValues.map((value, idx) => {
                             return (
                                 <label>
