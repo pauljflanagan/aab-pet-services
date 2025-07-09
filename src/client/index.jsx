@@ -1,8 +1,8 @@
 import Login from "./Login";
-import Produce from "./Produce";
-import Region from "./Region";
-import Saved from "./Saved";
+import Team from "./Team";
+import Story from "./Story";
 import Home from "./Home";
 import Register from "./Register"
+import Contact from "./Contact";
 
-export {Login, Produce, Region, Saved, Home, Register};
+export {Login, Team, Story, Contact, Home, Register};
