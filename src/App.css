@@ -88,6 +88,14 @@
   width: 100%;
 }
 
+.carousel-indicators [data-bs-target] {
+  background-color: black !important; /* Change the color of the indicators */
+}
+
+.carousel-indicators .active {
+  background-color: #007bff !important;
+}
+
 .phone-call-button {
   display: block;
   border: 1px solid black;

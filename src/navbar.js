@@ -80,9 +80,9 @@ export default function Navbar(isHeader=false) {
           <CustomLink to="/">Home</CustomLink>
           <CustomLink to="/Story">Our Story</CustomLink>
           <CustomLink to="/Team">Our Team</CustomLink>
-          {/* <CustomLink to="/Services">Our Services</CustomLink> */}
+          <CustomLink to="/Services">Services</CustomLink>
           <CustomLink to="/Contact">Contact Us</CustomLink>
-          {isLogin ? <CustomLink to="/" onClick={handleLogout}>Logout</CustomLink>: <CustomLink to="/Login">Login</CustomLink>}
+          {/* {isLogin ? <CustomLink to="/" onClick={handleLogout}>Logout</CustomLink>: <CustomLink to="/Login">Login</CustomLink>} */}
       </ul>
     </nav>
   )

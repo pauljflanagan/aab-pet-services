@@ -24,7 +24,7 @@ const GenericCardTable = (sellingPoints) => {
               <p>{description[0]}</p>
               <p>{description[1]}</p>
               {description.length > 2 && (
-                <a href={`/${description[2].pgLink}`} className="phone-call-button" style={{paddingLeft: "1rem"}}>
+                <a href={`/${description[2].pgLink}`} className="phone-call-button" style={{padding: "1rem", textDecoration: "none"}}>
                   {description[2].text}
                 </a>
               )}

@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./navbar";
-import { Home, Login, Team, Contact, Story, Register } from "./client/index";
+import { Home, Login, Team, Services, Contact, Story, Register } from "./client/index";
 import "./App.css";
 import { useState, useEffect } from "react";
 import logoImg from "./public/logo.webp";
@@ -141,6 +141,7 @@ function App() {
         <Route path="/Story" element={<Story />} />
         <Route path="/Team" element={<Team />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/Services" element={<Services />} />
         <Route path="/Login" element={<Login setLogin={setLogin} setUsername={setUsername} />} />
         <Route path="/Login/Logout" element={<Login setLogin={setLogin} setUsername={setUsername} />} />
         <Route path="/Login/Register" element={<Register setLogin={setLogin} setUsername={setUsername} />} />
