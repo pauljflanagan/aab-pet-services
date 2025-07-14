@@ -1,6 +1,7 @@
 {
   "name": "aab-pet-services",
   "version": "0.1.0",
+  "homepage": "https://pauljflanagan.github.io/aab-pet-services",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -21,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +51,7 @@
     "@types/react-dom": "^19.1.6",
     "ajv": "^6.12.6",
     "ajv-keywords": "^3.5.2",
+    "gh-pages": "^6.3.0",
     "typescript": "^5.8.3",
     "webpack": "^5.99.9",
     "webpack-dev-server": "^5.2.2"
