@@ -158,7 +158,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className='d-flex'>
+            <div className='d-flex' style={{ paddingBottom: '1rem' }}>
               <i
                 className='bi bi-clock-fill'
                 style={{ paddingRight: '1rem', color: 'black' }}

@@ -83,6 +83,12 @@
   background-color: black;
   size: 200%;
   color: white;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.site-logos:hover {
+  color: black;
+  background-color: white;
 }
 
 .login-form {
