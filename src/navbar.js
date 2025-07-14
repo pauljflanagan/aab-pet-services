@@ -54,7 +54,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 //   )
 // }
 
-export default function Navbar(isHeader=false) {
+export default function Navbar({isHeader=false}) {
   const [isLogin, setIsLogin] = useState(false);
   const [username, setUsername] = useState("");
   
@@ -81,7 +81,8 @@ export default function Navbar(isHeader=false) {
           <CustomLink to="/Team">Our Team</CustomLink>
           <CustomLink to="/Services">Services</CustomLink>
           <CustomLink to="/Contact">Contact Us</CustomLink>
-          {/* {isLogin ? <CustomLink to="/" onClick={handleLogout}>Logout</CustomLink>: <CustomLink to="/Login">Login</CustomLink>} */}
+          {isHeader ? <></>: <CustomLink to='/Login'>Employees</CustomLink> }
+          {/* {isLogin ? <CustomLink to="/" onClick={handleLogout}>Logout</CustomLink>: <CustomLink to="/Login">Employees</CustomLink>} */}
       </ul>
     </nav>
   )

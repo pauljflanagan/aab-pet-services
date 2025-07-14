@@ -4,6 +4,7 @@ import {
   Home,
   Login,
   Team,
+  Employees,
   Services,
   Contact,
   Story,
@@ -82,7 +83,7 @@ function App() {
           <img src={logoImg} alt='logo' className='site-title' />
         </a>
         <div className='navbar'>
-          <Navbar isLogin={isLogin} username={username} />
+          <Navbar isLogin={isLogin} username={username} isHeader={true}/>
         </div>
         <div style={{ width: '20%', textAlign: 'center' }}>
           <p>Belmont, Cambridge, Newton, Waltham & Watertown</p>
@@ -198,7 +199,7 @@ function App() {
             padding: '1%',
           }}
         >
-          <Navbar className='align-items-center' isHeader={false} />
+          <Navbar className='align-items-center' />
         </div>
       </div>
     );
@@ -272,6 +273,7 @@ function App() {
             />
           }
         />
+        <Route path='/Employees' element={<Employees setPageTitle={setPageTitle} />} />
       </Routes>
       <div>
         <PageFooter />
