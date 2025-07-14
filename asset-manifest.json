@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aab-pet-services/static/css/main.48116961.css",
-    "main.js": "/aab-pet-services/static/js/main.8bcc616f.js",
+    "main.css": "/aab-pet-services/static/css/main.990ee741.css",
+    "main.js": "/aab-pet-services/static/js/main.5c3d2647.js",
     "static/media/bkg-photo.png": "/aab-pet-services/static/media/bkg-photo.06a9db74ae39de4915f7.png",
     "static/media/dog-photo.png": "/aab-pet-services/static/media/dog-photo.9d17c6b7a4adaa2cdbe6.png",
     "static/media/Hero-3-1.png": "/aab-pet-services/static/media/Hero-3-1.cf20f50d4b1e87066207.png",
@@ -24,11 +24,11 @@
     "static/media/4.webp": "/aab-pet-services/static/media/4.eed16414cb639878da66.webp",
     "static/media/6.webp": "/aab-pet-services/static/media/6.121adaf1bd08edcca921.webp",
     "index.html": "/aab-pet-services/index.html",
-    "main.48116961.css.map": "/aab-pet-services/static/css/main.48116961.css.map",
-    "main.8bcc616f.js.map": "/aab-pet-services/static/js/main.8bcc616f.js.map"
+    "main.990ee741.css.map": "/aab-pet-services/static/css/main.990ee741.css.map",
+    "main.5c3d2647.js.map": "/aab-pet-services/static/js/main.5c3d2647.js.map"
   },
   "entrypoints": [
-    "static/css/main.48116961.css",
-    "static/js/main.8bcc616f.js"
+    "static/css/main.990ee741.css",
+    "static/js/main.5c3d2647.js"
   ]
 }
