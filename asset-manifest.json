@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/aab-pet-services/static/css/main.48116961.css",
+    "main.js": "/aab-pet-services/static/js/main.8bcc616f.js",
+    "static/media/bkg-photo.png": "/aab-pet-services/static/media/bkg-photo.06a9db74ae39de4915f7.png",
+    "static/media/dog-photo.png": "/aab-pet-services/static/media/dog-photo.9d17c6b7a4adaa2cdbe6.png",
+    "static/media/Hero-3-1.png": "/aab-pet-services/static/media/Hero-3-1.cf20f50d4b1e87066207.png",
+    "static/media/bootstrap-icons.woff?": "/aab-pet-services/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/bootstrap-icons.woff2?": "/aab-pet-services/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/dog-review.webp": "/aab-pet-services/static/media/dog-review.00f5cc890f182d42ee8e.webp",
+    "static/media/dog-side-head-tilt.webp": "/aab-pet-services/static/media/dog-side-head-tilt.25a2a87d11bda062fe59.webp",
+    "static/media/cat-bkgd.webp": "/aab-pet-services/static/media/cat-bkgd.5ab7e3a1053c7f2f6052.webp",
+    "static/media/rachel.webp": "/aab-pet-services/static/media/rachel.1bf9ca25a45dd4ff624f.webp",
+    "static/media/sarah.jpg": "/aab-pet-services/static/media/sarah.27847b7a899bf7e8fbe9.jpg",
+    "static/media/ted.webp": "/aab-pet-services/static/media/ted.674d2e9836c1bc7b0ae6.webp",
+    "static/media/5.webp": "/aab-pet-services/static/media/5.be78707ce04d491bcc21.webp",
+    "static/media/1.webp": "/aab-pet-services/static/media/1.10968937fc7fc219c08c.webp",
+    "static/media/9.webp": "/aab-pet-services/static/media/9.ad4dc80887c216f2d104.webp",
+    "static/media/7.webp": "/aab-pet-services/static/media/7.5dec1466eb119d3787b1.webp",
+    "static/media/8.webp": "/aab-pet-services/static/media/8.98c61f5be424747f8bf5.webp",
+    "static/media/logo.webp": "/aab-pet-services/static/media/logo.fb401f63ab73d07d19de.webp",
+    "static/media/2.webp": "/aab-pet-services/static/media/2.729d6a1959a08f43b894.webp",
+    "static/media/3.webp": "/aab-pet-services/static/media/3.b7d63a107f6e5a236c15.webp",
+    "static/media/4.webp": "/aab-pet-services/static/media/4.eed16414cb639878da66.webp",
+    "static/media/6.webp": "/aab-pet-services/static/media/6.121adaf1bd08edcca921.webp",
+    "index.html": "/aab-pet-services/index.html",
+    "main.48116961.css.map": "/aab-pet-services/static/css/main.48116961.css.map",
+    "main.8bcc616f.js.map": "/aab-pet-services/static/js/main.8bcc616f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48116961.css",
+    "static/js/main.8bcc616f.js"
+  ]
+}
