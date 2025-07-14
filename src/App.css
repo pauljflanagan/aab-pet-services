@@ -79,6 +79,12 @@
   font-size: 4em;
 }
 
+.site-logos {
+  background-color: black;
+  size: 200%;
+  color: white;
+}
+
 .login-form {
   display: flex;
   flex-direction: column;

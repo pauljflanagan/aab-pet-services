@@ -171,20 +171,20 @@ function App() {
               </div>
             </div>
             <div className='d-flex'>
-              <a href={facebookLink}>
+              <a href={facebookLink} style={{paddingRight: '1rem'}}>
                 {' '}
-                <i className='bi bi-facebook' />
+                <i className='bi bi-facebook site-logos' style={{padding: '1rem'}}/>
               </a>
-              <a href={instagramLink}>
+              <a href={instagramLink} style={{paddingRight: '1rem'}}>
                 {' '}
                 <i
-                  className='bi bi-instagram'
-                  style={{ paddingLeft: '1rem' }}
+                  className='bi bi-instagram site-logos'
+                  style={{ padding: '1rem' }}
                 />
               </a>
-              <a href={yelpLink}>
+              <a href={yelpLink} style={{paddingRight: '1rem'}}>
                 {' '}
-                <i className='bi bi-yelp' style={{ paddingLeft: '1rem' }} />
+                <i className='bi bi-yelp site-logos' style={{ padding: '1rem' }} />
               </a>
             </div>
           </div>
