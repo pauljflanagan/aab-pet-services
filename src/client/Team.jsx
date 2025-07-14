@@ -1,27 +1,52 @@
 import React, {useState, useEffect} from "react";
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import SidebarAttribute from "./teamSidebar";
 import tedImg from "../public/profile-photos/ted.webp";
 import RachelImg from "../public/profile-photos/rachel.webp";
 import SarahImg from "../public/profile-photos/sarah.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+const TeamSortBy = (sortAttrList) => {
+    return (
+        <div>
+            <Dropdown style={{width: "100%"}}>
+                <Dropdown.Toggle variant="secondary" id="dropdown-button-dark-example1">
+                    Sort By
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                    <Dropdown.Item href="#/action-1" active>Name</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Location</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">Care Role</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+        </div>
+    )
+}
+
 const TeamListDisplay = (teamListObj) => {
     let teamList = teamListObj.teamList;
     return (
-        <div className="d-flex flex-wrap justify-content-evenly" style={{padding: "2rem"}}>
-            {teamList.map((member, index) => (
-                <div className="align-items-center col-md-4 mb-4" key={index} style={{width:"25%"}}>
-                    <div className="card">
-                        <img src={member.imageUrl} alt={member.name} className="card-img-top" />
-                        <div className="card-body">
-                            <h2>{member.name}</h2>
-                            <h5>{member.jobTitle}</h5>
-                            <p>{member.location}</p>
-                            <p>{member.bio}</p>
+        <div>
+            <div className="d-flex flex-wrap flex-row-reverse" style={{padding: "2rem"}}>
+                <TeamSortBy />
+            </div>
+            <div className="d-flex flex-wrap justify-content-evenly" style={{padding: "2rem"}}>
+                {teamList.map((member, index) => (
+                    <div className="align-items-center col-md-4 mb-4" key={index} style={{width:"25%"}}>
+                        <div className="card">
+                            <img src={member.imageUrl} alt={member.name} className="card-img-top" />
+                            <div className="card-body">
+                                <h2>{member.name}</h2>
+                                <h5>{member.jobTitle}</h5>
+                                <p>{member.location}</p>
+                                <p>{member.bio}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     )
 }

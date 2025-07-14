@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SidebarAttribute from './teamSidebar';
 
 const ServicesDisplay = ({ serviceListObj }) => {
-    console.log("serviceListObj", serviceListObj)
     let serviceList = serviceListObj;
     return (
         <div style={{padding: "2rem"}}>
@@ -12,7 +11,7 @@ const ServicesDisplay = ({ serviceListObj }) => {
                 {serviceList.slice(rowIndex * 3, rowIndex * 3 + 3).map((service, index) => (
                     <div key={rowIndex * 3 + index} style={{width: "30%", margin: "0 1.5%"}}>
                         <div className="card" style={{height: "100%"}}>
-                            <div className="card-body">
+                            <div className="card-body" style={{height: "100%"}}>
                                 <h2>{service.service}</h2>
                                 <h5>{service.animal}</h5>
                                 <p>{service.description}</p>
@@ -55,14 +54,14 @@ const _FULL_SERVICE_LIST = [
         category: "Other",
         service: "Exotic Pet Sitting/Boarding",
         description: "We are happy to provide pet sitting services to many different exotic species. Due to the variety of their needs, we ask that you contact us to obtain an individualized quote.",
-        pricing: "Contact us for pricing"
+        price: "Contact us for pricing"
     },
     {
         id: 5,
         category: "Gift Certificate",
         service: "Gift Certificate",
         description: "Gift certificates are a great way to avoid the hassle of paying for pet services every week, and they make a great gift for friends and neighbors with pets! Gift certificates can be purchased in any denomination, and they never expire!",
-        pricing: "Contact us for pricing"
+        price: "Contact us for pricing"
     },
     {
         id: 6,

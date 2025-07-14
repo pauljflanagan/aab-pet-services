@@ -149,7 +149,7 @@ export default function Home({ setLogin, setUsername, isLogin, username }) {
           >
             <p
               className='display-text justify-content-center align-items-center'
-              style={{ fontSize: 20, color: 'white' }}
+              style={{ fontSize: 20, color: 'white', paddingTop: '1rem' }}
             >
               <b>Get in touch</b>
             </p>

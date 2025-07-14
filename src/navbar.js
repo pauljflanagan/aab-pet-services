@@ -73,7 +73,6 @@ export default function Navbar(isHeader=false) {
     window.location.href = "/";
   }
 
-  console.log(isLogin, username);
   return (
     <nav className="nav">
       <ul>

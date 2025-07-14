@@ -1,27 +1,68 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function SidebarAttribute({ attribObj, fullList, filterList, setFilterList }) {
-    let selectedFilters = attribObj.reduce((acc, attr) => {
-        acc[String(attr)] = [];
-        return acc;
-    }, {});
+    const [selectedFilters, setSelectedFilters] = useState([]);
+    const [currentAttribute, setCurrentAttribute] = useState(null);
 
-    const handleChange = (event, attribute) => {
-        if (event.target.checked) {
-            selectedFilters[attribute].push(event.target.value);
-            setFilterList(fullList.filter(item => item[attribute] === event.target.value));
-        } else {
-            selectedFilters[attribute] = selectedFilters[attribute].filter(value => value !== event.target.value);
-            if (selectedFilters[attribute].length === 0) {
-                setFilterList(fullList);
-            } else {
-                setFilterList(fullList.filter(item => selectedFilters[attribute].includes(item[attribute])));
+    // useEffect that runs after selectedFilters updates
+    useEffect(() => {
+        if (currentAttribute) {
+            let newItemList = [...fullList];
+            
+            var i = 0;
+            while (i < selectedFilters.length) {
+                if (selectedFilters[i].filters.length > 0) {
+                    newItemList = newItemList.filter(item => item[selectedFilters[i].attribute] && selectedFilters[i].filters.includes(item[selectedFilters[i].attribute]));
+                }
+                i++;
+            }
+
+            setFilterList(newItemList);
+            setCurrentAttribute(null); // Reset the trigger
+        }
+    }, [selectedFilters, currentAttribute, fullList, setFilterList]);
+
+    const getFilterAttr = (selFilterList, attribute) => {
+        for (let filter of selFilterList) {
+            console.log("filter", filter);
+            console.log("attribute", attribute);
+            if (filter.attribute === attribute) {
+                return filter.filters;
             }
         }
+        return [];
+    }
+
+    const handleFilters = (selFilterList, event, attribute) => {
+        let newFilters = [...selFilterList];
+        let filterAttr = getFilterAttr(selFilterList, attribute);
+        if (newFilters.length === 0) {
+            newFilters.push({attribute: attribute,
+                            filters: [event.target.value]});
+        } else {
+            if (event.target.checked) {
+                filterAttr.push(event.target.value);
+            } else {
+                filterAttr = filterAttr.filter(value => value !== event.target.value);
+            }
+            newFilters = newFilters.filter(filter => filter.attribute !== attribute);
+            newFilters.push({
+                attribute: attribute, 
+                filters: filterAttr
+            });
+        }
+        return newFilters;
+    }
+
+    const handleChange = (event, attribute) => {
+        const newSelectedFilterList = handleFilters(selectedFilters, event, attribute);
+        setSelectedFilters(newSelectedFilterList);
+        setCurrentAttribute(attribute); // Set the attribute to trigger useEffect
+        // Remove the immediate filtering logic - it will happen in useEffect
     }
 
     return (
