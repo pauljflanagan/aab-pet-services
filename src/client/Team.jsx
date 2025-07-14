@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import LocationComponent from "../lib/locationComponent";
 import SidebarAttribute from "./teamSidebar";
 import tedImg from "../public/profile-photos/ted.webp";
 import RachelImg from "../public/profile-photos/rachel.webp";
@@ -52,6 +52,7 @@ const TeamListDisplay = (teamListObj) => {
 }
 
 function Team({ setPageTitle }) {
+    LocationComponent();
     const _FULL_LIST = [
     {
         id: 1,
