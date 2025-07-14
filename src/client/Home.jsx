@@ -1,4 +1,4 @@
-import { React } from 'react';
+import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import goldenImg from '../public/home-photos/Hero-3-1.png';
 import orangeCatImg from '../public/home-photos/cat-bkgd.webp';
@@ -7,8 +7,12 @@ import awardsList from './awardsIndex.jsx';
 import reviewImg from '../public/home-photos/dog-review.webp';
 import Carousel from 'react-bootstrap/Carousel';
 
-export default function Home({ setLogin, setUsername, isLogin, username }) {
-  // Add isLogin and username props
+export default function Home({ setPageTitle, setLogin, setUsername, isLogin, username }) {
+  
+  useEffect(() => {
+    setPageTitle("Home");
+  }, [setPageTitle]);
+
   const divStyle = {
     backgroundImage: `url(${orangeCatImg})`,
     backgroundPosition: 'center',
@@ -80,7 +84,6 @@ export default function Home({ setLogin, setUsername, isLogin, username }) {
     return (
         <Carousel style={{ paddingBottom: '5%' }}>
             {testimonials.map((reason, index) => (
-                console.log(reason),
                 <Carousel.Item key={reason.id}>
                     <div className="text-slide" style={{ padding: '2rem', textAlign: 'center' }}>
                         <p className="display-text" style={{ fontSize: 20 }}>{reason.review}</p>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import SidebarAttribute from './teamSidebar';
 
@@ -87,23 +87,29 @@ const _FULL_SERVICE_LIST = [
 
 ]
 
-const Services = () => {
+const Services = ({ setPageTitle }) => {
     const [serviceList, setServiceList] = React.useState(_FULL_SERVICE_LIST);
-
+    
+    useEffect(() => {
+        setPageTitle("Services");
+    }, []);
+    
     return (
         <div>
-            <div className="d-flex flex-column align-items-center justify-content-center" style={{padding: "2rem"}}>
-                <h1 style={{fontSize: "4em"}}>Keeping your furry friends</h1>
-                <h1 style={{fontSize: "4em", paddingBottom: '3rem'}}>happy and healthy</h1>
-                <h3>Note: ABPS add an additional $10 fee for each visit on bank holidays</h3>
-                <h3 style={{color: "red"}}>Same day cancellation fee is 50% of the full fee</h3>
-            </div>
-            <div className="d-flex" style={{padding: "2rem 0 0 2rem "}}>
-                <div style={{width: "30%"}}>
-                    <SidebarAttribute attribObj={serviceFilterParams} fullList={_FULL_SERVICE_LIST} filterList={serviceList} setFilterList={setServiceList} />
+            <div>
+                <div className="d-flex flex-column align-items-center justify-content-center" style={{padding: "2rem 2rem 0 2rem"}}>
+                    <h1 className="page-heading">Keeping your furry friends</h1>
+                    <h1 className="page-heading" style={{paddingBottom: '1rem'}}>happy and healthy</h1>
+                    <h3>Note: ABPS add an additional $10 fee for each visit on bank holidays</h3>
+                    <h3 style={{color: "red"}}>Same day cancellation fee is 50% of the full fee</h3>
                 </div>
-                <div style={{height: "100%", width: '100%', boxSizing: 'border-box', backgroundColor: '#eaebec'}}>
-                    <ServicesDisplay serviceListObj={serviceList} />
+                <div className="d-flex" style={{padding: "2rem 0 0 2rem "}}>
+                    <div style={{width: "30%"}}>
+                        <SidebarAttribute attribObj={serviceFilterParams} fullList={_FULL_SERVICE_LIST} filterList={serviceList} setFilterList={setServiceList} />
+                    </div>
+                    <div style={{height: "100%", width: '100%', boxSizing: 'border-box', backgroundColor: '#eaebec'}}>
+                        <ServicesDisplay serviceListObj={serviceList} />
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import storyImg from '../public/our-story/dog-photo.png';
 import bkgImg from '../public/our-story/bkg-photo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -60,7 +61,11 @@ const sellingPointsObj = {
   ],
 };
 
-const App = () => {
+const App = ({ setPageTitle }) => {
+  useEffect(() => {
+    setPageTitle("Our Story");
+  }, []);
+  
   return (
     <div>
       <div className="d-flex flex-row justify-content-evenly" style={{padding: '5%'}}>

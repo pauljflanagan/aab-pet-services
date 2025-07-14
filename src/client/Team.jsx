@@ -29,7 +29,7 @@ const TeamListDisplay = (teamListObj) => {
     let teamList = teamListObj.teamList;
     return (
         <div>
-            <div className="d-flex flex-wrap flex-row-reverse" style={{padding: "2rem"}}>
+            <div className="d-flex flex-wrap flex-row-reverse" style={{padding: "2rem 2rem 0 2rem"}}>
                 <TeamSortBy />
             </div>
             <div className="d-flex flex-wrap justify-content-evenly" style={{padding: "2rem"}}>
@@ -51,7 +51,7 @@ const TeamListDisplay = (teamListObj) => {
     )
 }
 
-function Team() {
+function Team({ setPageTitle }) {
     const _FULL_LIST = [
     {
         id: 1,
@@ -84,13 +84,23 @@ function Team() {
     const [teamList, setTeamList] = useState(_FULL_LIST);
     const filterParams = ['location', 'name'];
     
+    useEffect(() => {
+        setPageTitle("Team");
+    }, []);
+    
     return (
-        <div className="d-flex" style={{padding: "2rem"}}>
-            <div style={{width: "100%"}}>
-                <SidebarAttribute attribObj={filterParams} fullList={_FULL_LIST} filterList={teamList} setFilterList={setTeamList} style={{width: "50%"}}/>
+        <div>
+            <div className="d-flex flex-column align-items-center justify-content-center" style={{padding: "2rem 2rem 0 2rem"}}>
+                <h1 className="page-heading">Meet our compassionate &</h1>
+                <h1 className="page-heading">Responsible pet care staff</h1>
             </div>
-            <div>
-                <TeamListDisplay teamList={teamList} />
+            <div className="d-flex" style={{padding: "2rem"}}>
+                <div style={{width: "100%", paddingTop: "2rem"}}>
+                    <SidebarAttribute attribObj={filterParams} fullList={_FULL_LIST} filterList={teamList} setFilterList={setTeamList} style={{width: "50%"}}/>
+                </div>
+                <div>
+                    <TeamListDisplay teamList={teamList} />
+                </div>
             </div>
         </div>
     )

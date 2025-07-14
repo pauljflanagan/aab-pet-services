@@ -1,7 +1,12 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 
-export default function Register(setLogin, setUserLogin) {
+export default function Register({ setLogin, setUsername, setPageTitle }) {
     // const [visible, setVisible] = useState(false);
+    
+    useEffect(() => {
+        setPageTitle("Register");
+    }, []);
+    
     const [newUser, setNewUser] = useState({
         username: '',
         passwordHash: '',
@@ -29,7 +34,7 @@ export default function Register(setLogin, setUserLogin) {
 		  if (response.ok) {
 			window.location.href = "/Home"
 			setLogin(true);
-			setUserLogin = (newUser.username);
+			setUsername = (newUser.username);
 		  }
             console.log(result);
         } catch (error) {

@@ -74,6 +74,11 @@
   flex-direction: row;
 }
 
+.page-heading {
+  text-transform: uppercase;
+  font-size: 4em;
+}
+
 .login-form {
   display: flex;
   flex-direction: column;
