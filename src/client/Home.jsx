@@ -6,6 +6,7 @@ import tiltedHeadImg from '../public/home-photos/dog-side-head-tilt.webp';
 import awardsList from './awardsIndex.jsx';
 import reviewImg from '../public/home-photos/dog-review.webp';
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-router-dom';
 
 export default function Home({ setPageTitle, setLogin, setUsername, isLogin, username }) {
   
@@ -145,8 +146,8 @@ export default function Home({ setPageTitle, setLogin, setUsername, isLogin, use
           <p className='display-text' style={{ fontSize: 20 }}>
             <b>What Can We Do To Help?</b>
           </p>
-          <a
-            href='/Contact'
+          <Link
+            to='/Contact'
             className='phone-call-button '
             style={{ width: '30%', height: '4rem', textDecoration: 'none' }}
           >
@@ -156,7 +157,7 @@ export default function Home({ setPageTitle, setLogin, setUsername, isLogin, use
             >
               <b>Get in touch</b>
             </p>
-          </a>
+          </Link>
           <p
             className='display-text'
             style={{ fontSize: 20, paddingTop: '20%' }}
@@ -221,11 +222,11 @@ export default function Home({ setPageTitle, setLogin, setUsername, isLogin, use
                     We understand that each pet’s needs are unique and have the know-how to handle all dog and cat breeds, including exotic ones. Our goal is to keep your furry companion safe, healthy, and happy.
                 </p>
                 <div className="d-flex align-items-center phone-call-button" style={{flexDirection: 'row', paddingLeft: "1rem"}}>
-                    <a href={`/Services`}>
+                    <Link to={`/Services`}>
                         <p className='display-text justify-content-center align-items-center' style={{ fontSize: 20, color: 'white' }}>
                             <b>Explore Our Services</b>
                         </p>
-                    </a>
+                    </Link>
                 </div>
             </div>
             <img
@@ -255,11 +256,11 @@ export default function Home({ setPageTitle, setLogin, setUsername, isLogin, use
         </div>
         <div style={{paddingBottom: '5%'}}>
             <div className="d-flex flex-row align-items-center phone-call-button" style={{padding: '1rem'}}>
-                <a href={`/Story`} style={{textAlign: 'center'}}>
+                <Link to={`/Story`} style={{textAlign: 'center'}}>
                     <p className='display-text justify-content-center align-items-center' style={{ fontSize: 20, color: 'white'}}>
                         <b>How We Evolved</b>
                     </p>
-                </a>
+                </Link>
             </div>
         </div>
     </div>

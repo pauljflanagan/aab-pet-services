@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import storyImg from '../public/our-story/dog-photo.png';
 import bkgImg from '../public/our-story/bkg-photo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 const divStyle = {
   backgroundImage: `url(${bkgImg})`,
@@ -25,9 +26,9 @@ const GenericCardTable = (sellingPoints) => {
               <p>{description[0]}</p>
               <p>{description[1]}</p>
               {description.length > 2 && (
-                <a href={`/${description[2].pgLink}`} className="phone-call-button" style={{padding: "1rem", textDecoration: "none"}}>
+                <Link to={`/${description[2].pgLink}`} className="phone-call-button" style={{padding: "1rem", textDecoration: "none"}}>
                   {description[2].text}
-                </a>
+                </Link>
               )}
             </div>
           </div>
