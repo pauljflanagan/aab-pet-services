@@ -254,9 +254,9 @@ export default function Home({ setPageTitle, setLogin, setUsername, isLogin, use
             
         </div>
         <div style={{paddingBottom: '5%'}}>
-            <div className="d-flex align-items-center phone-call-button" style={{flexDirection: 'row', paddingLeft: "1rem"}}>
-                <a href={`/Story`}>
-                    <p className='display-text justify-content-center align-items-center' style={{ fontSize: 20, color: 'white', padding: '1rem' }}>
+            <div className="d-flex flex-row align-items-center phone-call-button" style={{padding: '1rem'}}>
+                <a href={`/Story`} style={{textAlign: 'center'}}>
+                    <p className='display-text justify-content-center align-items-center' style={{ fontSize: 20, color: 'white'}}>
                         <b>How We Evolved</b>
                     </p>
                 </a>
