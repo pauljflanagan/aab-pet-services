@@ -1,8 +1,10 @@
 import { React, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login({ setLogin, setUsername, setPageTitle }) {
   // const [visible, setVisible] = useState(false);
   const [oldUser, setOldUser] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     setPageTitle('Login');
@@ -23,7 +25,7 @@ export default function Login({ setLogin, setUsername, setPageTitle }) {
   const logIn = async (e) => {
     e.preventDefault();
 
-    window.location.href = '/Employees';
+    navigate('/Employees');
   }
 
   // const logIn = async (e) => {

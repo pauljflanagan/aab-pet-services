@@ -6,7 +6,7 @@ export default function Employees({ setLogin, setUsername, setPageTitle }) {
   }, []);
 
   return (
-    <div>
+    <div style={{ padding: "10%" }}>
         <h1 className="page-title">Employee Portal Coming Soon!</h1>
     </div>
   )
