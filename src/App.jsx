@@ -14,6 +14,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import logoImg from './public/logo.webp';
 import { Helmet } from 'react-helmet-async';
+import ScrollToTop from './lib/scrollToTop';
 
 const PhoneDisplay = ({ phoneNumber, isPhoneButton = true }) => {
   let areaCode, localNumber, endingNumber;
@@ -222,6 +223,7 @@ function App() {
       <div>
         <PageHeader />
       </div>
+      <ScrollToTop />
       <Routes>
         <Route
           path='/'
