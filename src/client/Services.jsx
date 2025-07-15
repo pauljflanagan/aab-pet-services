@@ -141,7 +141,7 @@ const Services = ({ setPageTitle }) => {
                 <div className="d-flex flex-column align-items-center justify-content-center" style={{padding: "2rem 2rem 0 2rem"}}>
                     <h1 className="page-heading">Keeping your furry friends</h1>
                     <h1 className="page-heading" style={{paddingBottom: '1rem'}}>happy and healthy</h1>
-                    <h3>Note: ABPS add an additional $10 fee for each visit on bank holidays</h3>
+                    <h3>Note: ABPS adds an additional $10 fee for each visit on bank holidays</h3>
                     <h3 style={{color: "red"}}>Same day cancellation fee is 50% of the full fee</h3>
                 </div>
                 <div className="d-flex" style={{padding: "2rem 0 0 2rem "}}>
